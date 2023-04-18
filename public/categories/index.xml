@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - Plumliil-Blog</title>
+        <link>https://plumliil.cn/categories/</link>
+        <description>Categories - Category - Plumliil-Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>plumliil@outlook.com (Plumliil-Blog)</managingEditor>
+            <webMaster>plumliil@outlook.com (Plumliil-Blog)</webMaster><atom:link href="https://plumliil.cn/categories/" rel="self" type="application/rss+xml" /></channel>
+</rss>

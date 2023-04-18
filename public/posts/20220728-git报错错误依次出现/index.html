@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>git报错(错误依次出现) - Plumliil-Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="git报错(错误依次出现)" />
+<meta property="og:description" content="今天在提交时遇到了两个报错，是第一个报错解决后紧接着出现了第二个报错 git fatal: index file smaller than expected fatal: cannot lock ref &#39;HEAD&#39;: unable to resolve reference &#39;refs/heads/main&#39;: reference broken 第一个报错的原因是git文件夹中的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-28T11:36:17+00:00" />
+<meta property="article:modified_time" content="2022-07-28T11:36:17+00:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="git报错(错误依次出现)"/>
+<meta name="twitter:description" content="今天在提交时遇到了两个报错，是第一个报错解决后紧接着出现了第二个报错 git fatal: index file smaller than expected fatal: cannot lock ref &#39;HEAD&#39;: unable to resolve reference &#39;refs/heads/main&#39;: reference broken 第一个报错的原因是git文件夹中的"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/" /><link rel="prev" href="https://plumliil.cn/posts/20220722-javascript%E4%B8%AD%E7%BB%A7%E6%89%BF%E7%9A%84%E5%87%A0%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/" /><link rel="next" href="https://plumliil.cn/posts/20221026-vue2%E5%92%8Cvue3%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8C%BA%E5%88%AB/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "git报错(错误依次出现)",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/plumliil.cn\/posts\/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0\/"
+        },"genre": "posts","wordcount":  244 ,
+        "url": "https:\/\/plumliil.cn\/posts\/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0\/","datePublished": "2022-07-28T11:36:17+00:00","dateModified": "2022-07-28T11:36:17+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Plumliil-Blog"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Plumliil-Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png"
+        data-srcset="https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png, https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png 1.5x, https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png"
+        title="https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png" />Plumliil-Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Plumliil-Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png"
+        data-srcset="https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png, https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png 1.5x, https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png"
+        title="https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png" />Plumliil-Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">git报错(错误依次出现)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://plumliil.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Plumliil-Blog</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-28">2022-07-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;244 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><!-- raw HTML omitted -->
+<p>今天在提交时遇到了两个报错，是第一个报错解决后紧接着出现了第二个报错</p>
+<ol>
+<li><code>git fatal: index file smaller than expected </code></li>
+<li><code>fatal: cannot lock ref 'HEAD': unable to resolve reference 'refs/heads/main': reference broken</code></li>
+</ol>
+<p>第一个报错的原因是git文件夹中的index文件出错，解决办法是删除该index文件，然后运行<code>git reset</code>重新进行生成，但是<code>git reset</code>后提交是能提交了，但是不能<code>push</code>到远程仓库于是就出现了第二个问题。</p>
+<p>第二个报错可能是因为我删除了git中的index文件,导致.git文件损坏，解决办法，重新将远程仓库的.git文件夹复制到当前项目文件夹并覆盖，但是此举需要重新提交代码.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-07-28</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/" data-title="git报错(错误依次出现)"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/" data-title="git报错(错误依次出现)"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/" data-title="git报错(错误依次出现)"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/" data-title="git报错(错误依次出现)"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/20220722-javascript%E4%B8%AD%E7%BB%A7%E6%89%BF%E7%9A%84%E5%87%A0%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/" class="prev" rel="prev" title="javascript中继承的几种实现方法"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>javascript中继承的几种实现方法</a>
+            <a href="/posts/20221026-vue2%E5%92%8Cvue3%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8C%BA%E5%88%AB/" class="next" rel="next" title="vue2和vue3的响应式区别">vue2和vue3的响应式区别<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by Hugo | 2023 Plumliil</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
