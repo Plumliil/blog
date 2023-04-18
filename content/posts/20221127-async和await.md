@@ -1,6 +1,8 @@
 ---
 title: async和await
 date: 2022-11-27 22:53:08
+tags: ['JavaScript']
+categories: ["前端篇"]
 ---
 
 - async,await 是基于 promise,async 函数始终返回一个 Promise 对象

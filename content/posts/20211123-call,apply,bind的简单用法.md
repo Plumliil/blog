@@ -1,6 +1,8 @@
 ---
 title: 'call，apply，bind的简单用法'
 date: 2021-11-23 21:06:01
+tags: ['JavaScript']
+categories: ["前端篇"]
 ---
 
 ## 简单了解一下call，apply以及bind的用法

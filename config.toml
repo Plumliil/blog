@@ -4,7 +4,7 @@ baseURL = "http://plumliil.cn/"
 theme = "LoveIt"
 
 # 网站标题
-title = "Plumliil-Blog"
+title = "Plumliil Blog"
 
 # 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "zh-CN"
@@ -15,7 +15,7 @@ hasCJKLanguage = true
 
 # 作者配置
 [author]
-  name = "Plumliil-Blog"
+  name = "Plumliil"
   email = "plumliil@outlook.com"
   link = "https://plumliil.cn"
 

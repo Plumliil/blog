@@ -1,6 +1,8 @@
 ---
 title: javascript中继承的几种实现方法
 date: 2022-07-22 16:45:21
+tags: ['JavaScript']
+categories: ["前端篇"]
 ---
 
 

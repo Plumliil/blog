@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Html5 - Tag - Plumliil Blog</title>
+        <link>https://plumliil.cn/tags/html5/</link>
+        <description>Html5 - Tag - Plumliil Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>plumliil@outlook.com (Plumliil)</managingEditor>
+            <webMaster>plumliil@outlook.com (Plumliil)</webMaster><lastBuildDate>Mon, 19 Jul 2021 22:48:08 &#43;0000</lastBuildDate><atom:link href="https://plumliil.cn/tags/html5/" rel="self" type="application/rss+xml" /><item>
+    <title>html5中的sessionstorage和localstorage</title>
+    <link>https://plumliil.cn/posts/20210719-html5%E4%B8%AD%E7%9A%84session-storage%E5%92%8Clocal-storage/</link>
+    <pubDate>Mon, 19 Jul 2021 22:48:08 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20210719-html5%E4%B8%AD%E7%9A%84session-storage%E5%92%8Clocal-storage/</guid>
+    <description><![CDATA[<p>随着互联网的快速发展,基于网页的应用越来越普遍,同时也变的越来越复杂,为了满足各种各样的需求,会经常性在本地存储大量的数据, HTML5规范提出了相关解决方案。</p>
+<p><strong>本地存储特性</strong></p>
+<p>1、数据存储在用户浏览器中</p>
+<p>2、设置、读取方便、甚至页面刷新不失数据</p>
+<p>3、容量较大, 储存大小约为5MB</p>
+<p>4、只能存储字符串,可以将对象JSON.stringifyO编码后存储</p>]]></description>
+</item>
+</channel>
+</rss>

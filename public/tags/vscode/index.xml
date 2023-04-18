@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Vscode - Tag - Plumliil Blog</title>
+        <link>https://plumliil.cn/tags/vscode/</link>
+        <description>Vscode - Tag - Plumliil Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>plumliil@outlook.com (Plumliil)</managingEditor>
+            <webMaster>plumliil@outlook.com (Plumliil)</webMaster><lastBuildDate>Fri, 07 Apr 2023 23:21:32 &#43;0000</lastBuildDate><atom:link href="https://plumliil.cn/tags/vscode/" rel="self" type="application/rss+xml" /><item>
+    <title>vscode中ES7&#43; React/Redux/React-Native snippets插件使用</title>
+    <link>https://plumliil.cn/posts/20230407-vscode%E4%B8%ADreact%E7%BB%84%E4%BB%B6/</link>
+    <pubDate>Fri, 07 Apr 2023 23:21:32 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20230407-vscode%E4%B8%ADreact%E7%BB%84%E4%BB%B6/</guid>
+    <description><![CDATA[通过使用这个插件我们可以很方便的进行组件/方法/文件的导入 本篇博客仅对插件进行介绍翻译,便于自己以后使用 常用片段列表 imr: 引入 React import React from 'react' imrc: 导入 React]]></description>
+</item>
+</channel>
+</rss>

@@ -1,6 +1,8 @@
 ---
 title: 手写call&apply&bind
 date: 2022-01-06 22:54:44
+tags: ['JavaScript']
+categories: ["前端篇"]
 ---
 主要思想：给对象一个临时函数来调用,调用完毕后删除该临时函数对应的属性
 call函数封装

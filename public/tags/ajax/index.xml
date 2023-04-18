@@ -1,0 +1,50 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Ajax - Tag - Plumliil Blog</title>
+        <link>https://plumliil.cn/tags/ajax/</link>
+        <description>Ajax - Tag - Plumliil Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>plumliil@outlook.com (Plumliil)</managingEditor>
+            <webMaster>plumliil@outlook.com (Plumliil)</webMaster><lastBuildDate>Sun, 15 Aug 2021 23:51:34 &#43;0000</lastBuildDate><atom:link href="https://plumliil.cn/tags/ajax/" rel="self" type="application/rss+xml" /><item>
+    <title>认识Ajax</title>
+    <link>https://plumliil.cn/posts/20210815-%E8%AE%A4%E8%AF%86ajax/</link>
+    <pubDate>Sun, 15 Aug 2021 23:51:34 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20210815-%E8%AE%A4%E8%AF%86ajax/</guid>
+    <description><![CDATA[<h2 id="ajax应用场景">Ajax应用场景</h2>
+<h5 id="1页面上拉加载更多数据">1.页面上拉加载更多数据</h5>
+<h5 id="2列表数据无刷新分页">2.列表数据无刷新分页</h5>
+<h5 id="3表单项离开焦点数据验证">3.表单项离开焦点数据验证</h5>
+<h5 id="4搜索框提示文字下拉列表">4.搜索框提示文字下拉列表</h5>
+<h2 id="ajax运行环境">Ajax运行环境</h2>
+<h5 id="ajax技术需要运行在网站环境下才会生效可用node创建的服务器作为网站服务器">Ajax技术需要运行在网站环境下才会生效，可用Node创建的服务器作为网站服务器</h5>
+<h2 id="ajax运行原理">Ajax运行原理</h2>
+<h5 id="普通">普通</h5>
+<p><strong>浏览器端&mdash;&mdash;-请求&mdash;&mdash;-&gt;服务器端</strong></p>
+<p><strong>浏览器端&lt;&mdash;&mdash;响应&mdash;&mdash;-服务器端</strong></p>
+<p>​           <strong>开发人员不可控</strong></p>
+<h5 id="ajax">ajax</h5>
+<p><strong>浏览器端&mdash;&mdash;&ndash; 创建&mdash;&mdash;-&gt;Ajax&mdash;&mdash;-请求&mdash;&mdash;-&gt;服务器端</strong></p>
+<p><strong>浏览器端&lt;&mdash;&mdash;&ndash; 响应&mdash;&mdash;Ajax&lt;&mdash;&mdash;-响应&mdash;&mdash;-服务器端</strong></p>
+<p>​                            <strong>开发人员可控</strong></p>
+<h5 id="ajax相当于浏览器发送请求与接收响应的代理人以实现不影响用户浏览页面的情况下局部更新页面数据从而提高用户体验">ajax相当于浏览器发送请求与接收响应的代理人，以实现不影响用户浏览页面的情况下局部更新页面数据，从而提高用户体验</h5>]]></description>
+</item>
+<item>
+    <title>Ajax函数封装</title>
+    <link>https://plumliil.cn/posts/20210815-ajax%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85/</link>
+    <pubDate>Sun, 15 Aug 2021 23:39:11 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20210815-ajax%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85/</guid>
+    <description><![CDATA[<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">ajax</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">url</span><span class="o">:</span><span class="s1">&#39;http://localhost:3000/xxx&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">data</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;zhangsan&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">age</span><span class="o">:</span><span class="mi">20</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">success</span><span class="o">:</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div>]]></description>
+</item>
+</channel>
+</rss>

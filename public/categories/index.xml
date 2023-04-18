@@ -1,8 +1,64 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - Plumliil-Blog</title>
+        <title>Categories - Category - Plumliil Blog</title>
         <link>https://plumliil.cn/categories/</link>
-        <description>Categories - Category - Plumliil-Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>plumliil@outlook.com (Plumliil-Blog)</managingEditor>
-            <webMaster>plumliil@outlook.com (Plumliil-Blog)</webMaster><atom:link href="https://plumliil.cn/categories/" rel="self" type="application/rss+xml" /></channel>
+        <description>Categories - Category - Plumliil Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>plumliil@outlook.com (Plumliil)</managingEditor>
+            <webMaster>plumliil@outlook.com (Plumliil)</webMaster><lastBuildDate>Thu, 13 Apr 2023 12:50:23 &#43;0000</lastBuildDate><atom:link href="https://plumliil.cn/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>前端篇</title>
+    <link>https://plumliil.cn/categories/%E5%89%8D%E7%AB%AF%E7%AF%87/</link>
+    <pubDate>Thu, 13 Apr 2023 12:50:23 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/categories/%E5%89%8D%E7%AB%AF%E7%AF%87/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>工具篇</title>
+    <link>https://plumliil.cn/categories/%E5%B7%A5%E5%85%B7%E7%AF%87/</link>
+    <pubDate>Fri, 07 Apr 2023 23:21:32 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/categories/%E5%B7%A5%E5%85%B7%E7%AF%87/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>计网篇</title>
+    <link>https://plumliil.cn/categories/%E8%AE%A1%E7%BD%91%E7%AF%87/</link>
+    <pubDate>Mon, 28 Nov 2022 12:56:52 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/categories/%E8%AE%A1%E7%BD%91%E7%AF%87/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>版本管理</title>
+    <link>https://plumliil.cn/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</link>
+    <pubDate>Thu, 28 Jul 2022 11:36:17 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>优化篇</title>
+    <link>https://plumliil.cn/categories/%E4%BC%98%E5%8C%96%E7%AF%87/</link>
+    <pubDate>Tue, 05 Apr 2022 12:58:32 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/categories/%E4%BC%98%E5%8C%96%E7%AF%87/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>后端篇</title>
+    <link>https://plumliil.cn/categories/%E5%90%8E%E7%AB%AF%E7%AF%87/</link>
+    <pubDate>Mon, 28 Mar 2022 23:03:15 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/categories/%E5%90%8E%E7%AB%AF%E7%AF%87/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>算法篇</title>
+    <link>https://plumliil.cn/categories/%E7%AE%97%E6%B3%95%E7%AF%87/</link>
+    <pubDate>Wed, 09 Mar 2022 22:32:11 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/categories/%E7%AE%97%E6%B3%95%E7%AF%87/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

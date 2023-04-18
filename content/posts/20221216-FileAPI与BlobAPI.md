@@ -1,6 +1,8 @@
 ---
 title: FileAPI与BlobAPI
 date: 2022-12-16 21:14:17
+tags: ['JavaScript']
+categories: ["前端篇"]
 ---
 
 ## File

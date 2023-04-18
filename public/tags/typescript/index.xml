@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>TypeScript - Tag - Plumliil Blog</title>
+        <link>https://plumliil.cn/tags/typescript/</link>
+        <description>TypeScript - Tag - Plumliil Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>plumliil@outlook.com (Plumliil)</managingEditor>
+            <webMaster>plumliil@outlook.com (Plumliil)</webMaster><lastBuildDate>Tue, 01 Nov 2022 23:51:03 &#43;0000</lastBuildDate><atom:link href="https://plumliil.cn/tags/typescript/" rel="self" type="application/rss+xml" /><item>
+    <title>localStorage数据过期时间的设置</title>
+    <link>https://plumliil.cn/posts/20221101-%E8%AE%BE%E7%BD%AElocalstorage%E7%9A%84%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4/</link>
+    <pubDate>Tue, 01 Nov 2022 23:51:03 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20221101-%E8%AE%BE%E7%BD%AElocalstorage%E7%9A%84%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4/</guid>
+    <description><![CDATA[使用ts简单封装localStorage函数,使之具有时效性 class MyLocalStorage { private static time: number = new Date().getTime(); private constructor() {} public static get(key: string) { let value = localStorage.getItem(key); if (!value) return null; let valueArr = value.split(&#34;|&#34;); // 如果和储存字符冲突]]></description>
+</item>
+</channel>
+</rss>

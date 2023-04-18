@@ -1,6 +1,8 @@
 ---
 title: "vscode中ES7+ React/Redux/React-Native snippets插件使用"
 date: 2023-04-07 23:21:32
+tags: ['Vscode','插件']
+categories: ["工具篇"]
 ---
 
 通过使用这个插件我们可以很方便的进行组件/方法/文件的导入

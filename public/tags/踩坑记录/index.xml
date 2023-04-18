@@ -1,0 +1,51 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>踩坑记录 - Tag - Plumliil Blog</title>
+        <link>https://plumliil.cn/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
+        <description>踩坑记录 - Tag - Plumliil Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>plumliil@outlook.com (Plumliil)</managingEditor>
+            <webMaster>plumliil@outlook.com (Plumliil)</webMaster><lastBuildDate>Thu, 29 Dec 2022 19:32:44 &#43;0000</lastBuildDate><atom:link href="https://plumliil.cn/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
+    <title>vue3&#43;ts使用defineExpose报TS:2339</title>
+    <link>https://plumliil.cn/posts/20221229-vue3%E4%B8%AD%E4%BD%BF%E7%94%A8defineexpose%E6%8A%A5ts-2339/</link>
+    <pubDate>Thu, 29 Dec 2022 19:32:44 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20221229-vue3%E4%B8%AD%E4%BD%BF%E7%94%A8defineexpose%E6%8A%A5ts-2339/</guid>
+    <description><![CDATA[开头先把错误贴上 src/hooks/usePageSearch.ts:9:27 TS2339: Property &#39;getPageData&#39; does not exist on type &#39;{ $:ComponentInternalInstance; $data: {}; $props: Partial&lt;{}&gt; &amp; Pick&lt;Readonly&lt;ExtractPropTypes&lt;{}&gt;&gt; &amp; VNodeProps &amp;AllowedComponentProps &amp; ComponentCustomProps, &#34;key&#34; | ... 10 more ... | &#34;style&#34;&gt;; ... 10 more ...; $watch(source: string | Function, cb:Function, options?: WatchOptions&lt;...&gt; | undefined): WatchStopHan...&#39;. &gt; 9 | pageContentRef.value?.getPageData({}) 在这里解释一下错误,错误的原]]></description>
+</item>
+<item>
+    <title>vue3&#43;ts使用v-for出现unknown问题</title>
+    <link>https://plumliil.cn/posts/20221227-vue3&#43;ts%E4%BD%BF%E7%94%A8v-for%E5%87%BA%E7%8E%B0unknown%E9%97%AE%E9%A2%98/</link>
+    <pubDate>Tue, 27 Dec 2022 19:00:45 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20221227-vue3&#43;ts%E4%BD%BF%E7%94%A8v-for%E5%87%BA%E7%8E%B0unknown%E9%97%AE%E9%A2%98/</guid>
+    <description><![CDATA[最近在写项目时遇到了一个问题,当我从父组件向子组件传数据并且需要将子组件对传入的数据进行v-for循环渲染时,在此出遇到了一个ts报错 报错为]]></description>
+</item>
+<item>
+    <title>git报错(错误依次出现)</title>
+    <link>https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/</link>
+    <pubDate>Thu, 28 Jul 2022 11:36:17 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/</guid>
+    <description><![CDATA[今天在提交时遇到了两个报错，是第一个报错解决后紧接着出现了第二个报错 git fatal: index file smaller than expected fatal: cannot lock ref 'HEAD': unable to resolve reference 'refs/heads/main': reference broken 第一个报错的原因是git文件夹中的]]></description>
+</item>
+<item>
+    <title>git提交问题</title>
+    <link>https://plumliil.cn/posts/20220710-git%E6%8F%90%E4%BA%A4%E9%97%AE%E9%A2%98/</link>
+    <pubDate>Sun, 10 Jul 2022 17:13:24 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20220710-git%E6%8F%90%E4%BA%A4%E9%97%AE%E9%A2%98/</guid>
+    <description><![CDATA[git提交每次都需要填写github帐号密码，解决方式 使用命令 git remote -v 命令行反馈 origin [https://gitee.com/xxx/xxx.git](https://gitee.com/plumliil/lii-ui.git) (fetch) origin [https://gitee.com/xxx/xxx.git](https://gitee.com/plumliil/lii-ui.git) (push) 改为ssh链接即可解决问题 复制ssh 移除原有的提交]]></description>
+</item>
+<item>
+    <title>vue报错解决Duplicate keys detected:[object Object]</title>
+    <link>https://plumliil.cn/posts/20210616-vue%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3duplicate-keys-detected-object-object/</link>
+    <pubDate>Mon, 16 Aug 2021 10:54:37 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20210616-vue%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3duplicate-keys-detected-object-object/</guid>
+    <description><![CDATA[<p>​	最近在做vue项目时遇到了报错</p>
+<p>​		<em>Duplicate keys detected: ‘[object Object]’. This may cause an update error.</em></p>
+<p>​	由于这个问题是第一次遇见，所以在解决起来废了点时间</p>
+<p>​	![1](E:\Blog_Github\Plumliil\source_posts\vue报错解决Duplicate keys detected[object Object]\1.png)</p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,55 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>版本管理 - Category - Plumliil Blog</title>
+        <link>https://plumliil.cn/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</link>
+        <description>版本管理 - Category - Plumliil Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>plumliil@outlook.com (Plumliil)</managingEditor>
+            <webMaster>plumliil@outlook.com (Plumliil)</webMaster><lastBuildDate>Thu, 28 Jul 2022 11:36:17 &#43;0000</lastBuildDate><atom:link href="https://plumliil.cn/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>git报错(错误依次出现)</title>
+    <link>https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/</link>
+    <pubDate>Thu, 28 Jul 2022 11:36:17 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20220728-git%E6%8A%A5%E9%94%99%E9%94%99%E8%AF%AF%E4%BE%9D%E6%AC%A1%E5%87%BA%E7%8E%B0/</guid>
+    <description><![CDATA[今天在提交时遇到了两个报错，是第一个报错解决后紧接着出现了第二个报错 git fatal: index file smaller than expected fatal: cannot lock ref 'HEAD': unable to resolve reference 'refs/heads/main': reference broken 第一个报错的原因是git文件夹中的]]></description>
+</item>
+<item>
+    <title>git提交问题</title>
+    <link>https://plumliil.cn/posts/20220710-git%E6%8F%90%E4%BA%A4%E9%97%AE%E9%A2%98/</link>
+    <pubDate>Sun, 10 Jul 2022 17:13:24 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20220710-git%E6%8F%90%E4%BA%A4%E9%97%AE%E9%A2%98/</guid>
+    <description><![CDATA[git提交每次都需要填写github帐号密码，解决方式 使用命令 git remote -v 命令行反馈 origin [https://gitee.com/xxx/xxx.git](https://gitee.com/plumliil/lii-ui.git) (fetch) origin [https://gitee.com/xxx/xxx.git](https://gitee.com/plumliil/lii-ui.git) (push) 改为ssh链接即可解决问题 复制ssh 移除原有的提交]]></description>
+</item>
+<item>
+    <title>Git学习Ⅱ</title>
+    <link>https://plumliil.cn/posts/20210722-git%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Thu, 22 Jul 2021 17:59:31 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20210722-git%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[<h4 id="10alias命令别名提高操作效率">10.alias命令别名提高操作效率</h4>
+<p>使用alias简化提交指令</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>alias<span class="o">]</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">a</span> <span class="o">=</span> add .
+</span></span><span class="line"><span class="cl">	<span class="nv">c</span> <span class="o">=</span> commit
+</span></span><span class="line"><span class="cl">	<span class="nv">l</span> <span class="o">=</span> log
+</span></span><span class="line"><span class="cl">	<span class="nv">s</span> <span class="o">=</span> status 
+</span></span></code></pre></div><h4 id="11git分支branch存在的意义">11.git分支branch存在的意义</h4>
+<p>Git分支是由指针管理起来的，所以创建、切换、合并、删除分支都非常快，非常适合大型项目的开发。</p>
+<p>在分支上做开发，调试好了后再合并到主分支。那么每个人开发模块式都不会影响到别人。</p>]]></description>
+</item>
+<item>
+    <title>Git学习Ⅰ</title>
+    <link>https://plumliil.cn/posts/20210721-git%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Wed, 21 Jul 2021 10:35:15 &#43;0000</pubDate>
+    <author>Plumliil</author>
+    <guid>https://plumliil.cn/posts/20210721-git%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[<h1 id="git学习">Git学习Ⅰ</h1>
+<h4 id="1配置作者信息">1.配置作者信息</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ mkdir git  创建文件夹
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ll 显示 目录列表
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">pwd</span> 看当前在那个文件夹 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">cd</span> 会文件夹目录
+</span></span></code></pre></div>]]></description>
+</item>
+</channel>
+</rss>
