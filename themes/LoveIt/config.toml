@@ -6,10 +6,11 @@
 [params]
   # site default theme ["auto", "light", "dark"]
   # 网站默认主题 ["auto", "light", "dark"]
-  defaultTheme = "auto"
+  defaultTheme = "light"
   # public git repo url only then enableGitInfo is true
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = "https://github.com/Plumliil/Plumliil-blog.git"
+  enableGitInfo = true
+  gitRepo = "https://github.com/Plumliil/blog.git"
   # which hash function used for SRI, when empty, no SRI is used
   # ["sha256", "sha384", "sha512", "md5"]
   # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
@@ -42,7 +43,8 @@
     [params.header.title]
       # URL of the LOGO
       # LOGO 的 URL
-      logo = "https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png"
+      # logo = "https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png"
+      # logo = "https://img1.imgtp.com/2023/06/24/AcaaPEta.png"
       # title name
       # 标题名称
       name = "Plumliil Blog"
@@ -54,7 +56,7 @@
       post = ""
       # whether to use typeit animation for title name
       # 是否为标题显示打字机动画
-      typeit = false
+      typeit = true
 
   # Footer config
   # 页面底部信息配置
@@ -62,19 +64,19 @@
     enable = true
     # Custom content (HTML format is supported)
     # 自定义内容 (支持 HTML 格式)
-    custom = "Powered by Hugo | 2023 Plumliil | theme LoveIt"
+    custom = ""
     # whether to show Hugo and theme info
     # 是否显示 Hugo 和主题信息
     hugo = false
     # whether to show copyright info
     # 是否显示版权信息
-    copyright = false
+    copyright = true
     # whether to show the author
     # 是否显示作者
-    author = false
+    author = true
     # site creation time
     # 网站创立年份
-    since = false
+    since = "2021"
     # ICP info only in China (HTML format is supported)
     # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
     icp = ""
@@ -119,7 +121,7 @@
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
     # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
-    svgFavicon = "https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png"
+    svgFavicon = "https://img1.imgtp.com/2023/06/24/AcaaPEta.png"
     # Android browser theme color
     # Android 浏览器主题色
     themeColor = "#ffffff"
@@ -375,7 +377,7 @@
     [params.page.share]
       enable = true
       Twitter = true
-      Facebook = true
+      Facebook = false
       Linkedin = false
       Whatsapp = false
       Pinterest = false
@@ -385,11 +387,11 @@
       VK = false
       Buffer = false
       Xing = false
-      Line = true
+      Line = false
       Instapaper = false
       Pocket = false
       Flipboard = false
-      Weibo = true
+      Weibo = false
       Blogger = false
       Baidu = false
       Odnoklassniki = false
@@ -563,10 +565,10 @@
   # Analytics config
   # 网站分析配置
   [params.analytics]
-    enable = false
+    enable = true
     # Google Analytics
     [params.analytics.google]
-      id = ""
+      id = "G-DWDPX2NGYH"
       # whether to anonymize IP
       # 是否匿名化用户 IP
       anonymizeIP = true
