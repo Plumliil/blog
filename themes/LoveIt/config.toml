@@ -158,9 +158,9 @@
     # 是否在搜索索引中使用基于 baseURL 的绝对路径
     absoluteURL = false
     [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
+      index = "plumliil"
+      appID = "M8CSKJL945"
+      searchKey = "47e2d1501cc24a6a7a502b50c9a7ebe4"
 
   # Home page config
   # 主页信息设置
