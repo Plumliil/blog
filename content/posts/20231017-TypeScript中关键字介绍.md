@@ -74,4 +74,22 @@ const person: Persion = {
 person.name = 'wang'; // 无法为“name”赋值，因为它是只读属性
 ```
 
+### Exclude
+Exclude 是 TypeScript 中内置的一个类型修饰器，用于从一个类型中排除另一个类型。
+```ts
+interface Test1 {
+  name: string
+  color: string
+}
+interface Test2 {
+  name: string
+}
+
+type TestType = Exclude<keyof Test1, keyof Test2>
+
+const t1: TestType = "name"  // 不能将类型“"name"”分配给类型“"color"”。
+```
+
+以上述代码为例,从`name|color`中排除类型`name`
+
 目前先记录到这里,该篇文章会继续更新...
