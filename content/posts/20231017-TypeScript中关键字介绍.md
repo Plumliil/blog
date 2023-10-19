@@ -8,7 +8,7 @@ categories: ["前端篇"]
 最近学习TS类型体操,其中用到了例如 keyof infer等的关键字,但在日常项目中又不太常用,故有此记录,方便查阅
 
 ### extends
-用于类型的继承
+#### 用于类型的继承
 ```ts
 interface Animal {
   name:string
@@ -27,6 +27,30 @@ const duck:Duck={
 }
 ```
 上述代码中Duck继承了父类型,并且又声明了自己独有的类型
+
+#### 用于类型的推断
+```ts
+type Test1 = 'a' | 'b' | 'c'
+type Test2 = 'a' | 's'
+
+type MyExclude<T, U> = T extends U ? never : T;
+
+type TestType = MyExclude<Test1, Test2>
+const t: TestType = 'b'
+```
+当extends两边是联合类型时,就会遵守分配律的规则拆分左侧联合类型,依次来判断拆分后的类型是否满足继承关系,再通过判断继续联合
+
+以上述代码为例
+
+`'a' extends 'a' | 's'  true  never`
+
+`'b' extends 'a' | 's'  false  'b'`
+
+`'c' extends 'a' | 's'  false  'c'`
+
+最终TestType的类型是`'b' | 'c'`
+
+
 
 ### keyof
 keyof用来获取对象类型的所有键的联合类型
@@ -90,6 +114,5 @@ type TestType = Exclude<keyof Test1, keyof Test2>
 const t1: TestType = "name"  // 不能将类型“"name"”分配给类型“"color"”。
 ```
 
-以上述代码为例,从`name|color`中排除类型`name`
 
 目前先记录到这里,该篇文章会继续更新...

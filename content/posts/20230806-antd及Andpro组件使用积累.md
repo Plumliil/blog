@@ -409,3 +409,38 @@ recordCreatorProps={{
   newRecordType: "dataSource",
 }}
 ```
+
+### ProFormDependency
+依赖某一个字段渲染另一个字段
+```tsx
+import { ProForm, ProFormDependency, ProFormSelect } from '@ant-design/pro-components';
+export default () => {
+  const option = [{ label: '1', value: 1 }, { label: '2', value: 2 }, { label: '3', value: 3 }]
+  return (
+    <div style={{
+      marginTop: 200
+    }}>
+      <ProForm submitter={false}>
+        <ProFormSelect
+          name="field1"
+          options={option}
+        />
+        <ProFormDependency name={['field1']}>
+          {
+            ({ field1 }) => {
+              if (!field1) return <></>
+              const option1 = [{ label: '1-1', value: 11 }, { label: '1-2', value: 12 }, { label: '1-3', value: 13 }]
+              const option2 = [{ label: '2-1', value: 21 }, { label: '2-2', value: 22 }, { label: '2-3', value: 23 }]
+              const option3 = [{ label: '3-1', value: 31 }, { label: '3-2', value: 32 }, { label: '3-3', value: 33 }]
+              return <ProFormSelect
+                name="field2"
+                options={field1 === 1 ? option1 : field1 === 2 ? option2 : option3}
+              />
+            }
+          }
+        </ProFormDependency>
+      </ProForm>
+    </div>
+  );
+};
+```
