@@ -2,6 +2,8 @@
 title: "Antd及AntdPro组件使用积累"
 date: 2023-08-06T14:24:44+08:00
 draft: false
+tags: ['React','AntD']
+categories: ["前端篇"]
 ---
 
 Ant Design 和 Ant Design Pro 可能是 React 选手在日常工作中接触最多的库了.
