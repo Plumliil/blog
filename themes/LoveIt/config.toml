@@ -121,7 +121,7 @@
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
     # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
-    svgFavicon = "https://img1.imgtp.com/2023/06/24/AcaaPEta.png"
+    svgFavicon = "https://s2.loli.net/2022/12/27/gAaOJRVl7iTBbGh.png"
     # Android browser theme color
     # Android 浏览器主题色
     themeColor = "#ffffff"
@@ -135,10 +135,10 @@
   # Search config
   # 搜索配置
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["lunr", "algolia"]
     # 搜索引擎的类型 ["lunr", "algolia"]
-    type = "lunr"
+    type = "algolia"
     # max index length of the chunked content
     # 文章内容最长索引长度
     contentLength = 4000
