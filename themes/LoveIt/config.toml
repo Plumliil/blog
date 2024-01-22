@@ -43,7 +43,7 @@
     [params.header.title]
       # URL of the LOGO
       # LOGO 的 URL
-      # logo = "https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png"
+      logo = "https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png"
       # logo = "https://img1.imgtp.com/2023/06/24/AcaaPEta.png"
       # title name
       # 标题名称
