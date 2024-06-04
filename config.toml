@@ -61,5 +61,5 @@ hasCJKLanguage = true
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML"] # 如果都想输出，则设置为["HTML", "MarkDown"]，页面底部有"查看网页原文"
   section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"] 
   taxonomyTerm = ["HTML"]
