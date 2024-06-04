@@ -4,7 +4,7 @@ baseURL = "https://plumliil.cn/"
 theme = "LoveIt"
 
 # 网站标题
-title = "Plumliil Blog"
+title = "Plumliil Blogs"
 
 # 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "zh-CN"
