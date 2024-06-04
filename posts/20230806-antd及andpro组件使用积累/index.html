@@ -1,0 +1,371 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>Antd及AntdPro组件使用积累 - Plumliil Blogs</title><meta name=Description content="This is my cool site"><meta property="og:url" content="https://plumliil.cn/posts/20230806-antd%E5%8F%8Aandpro%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E7%A7%AF%E7%B4%AF/">
+<meta property="og:site_name" content="Plumliil Blogs"><meta property="og:title" content="Antd及AntdPro组件使用积累"><meta property="og:description" content="Ant Design 和 Ant Design Pro 可能是 React 选手在日常工作中接触最多的库了. 接下来就说说在工作用可能会用到但是不经常用,但用的时候会忘的一些属性或方法的使用 Modal 自定义"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-08-06T14:24:44+08:00"><meta property="article:modified_time" content="2023-08-06T14:24:44+08:00"><meta property="article:tag" content="React"><meta property="article:tag" content="AntD"><meta name=twitter:card content="summary"><meta name=twitter:title content="Antd及AntdPro组件使用积累"><meta name=twitter:description content="Ant Design 和 Ant Design Pro 可能是 React 选手在日常工作中接触最多的库了. 接下来就说说在工作用可能会用到但是不经常用,但用的时候会忘的一些属性或方法的使用 Modal 自定义"><meta name=application-name content="Plumliil Blog"><meta name=apple-mobile-web-app-title content="Plumliil Blog"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel=icon href=https://s2.loli.net/2022/12/27/gAaOJRVl7iTBbGh.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://plumliil.cn/posts/20230806-antd%E5%8F%8Aandpro%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E7%A7%AF%E7%B4%AF/><link rel=prev href=https://plumliil.cn/posts/20230702-react%E4%B8%AD%E7%BC%96%E5%86%99%E8%87%AA%E5%AE%9A%E4%B9%89hook/><link rel=next href=https://plumliil.cn/posts/20230907-react%E4%B8%ADusecontextusereducer%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css></noscript><link rel=preload href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Antd及AntdPro组件使用积累","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/plumliil.cn\/posts\/20230806-antd%E5%8F%8Aandpro%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E7%A7%AF%E7%B4%AF\/"},"image":["https:\/\/s2.loli.net\/2022\/04\/05\/qa4sCStuDX5gyBb.png"],"genre":"posts","keywords":"React, AntD","wordcount":1498,"url":"https:\/\/plumliil.cn\/posts\/20230806-antd%E5%8F%8Aandpro%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E7%A7%AF%E7%B4%AF\/","datePublished":"2023-08-06T14:24:44+08:00","dateModified":"2023-08-06T14:24:44+08:00","publisher":{"@type":"Organization","name":"","logo":"https:\/\/s2.loli.net\/2022\/04\/05\/qa4sCStuDX5gyBb.png"},"author":{"@type":"Person","name":"Plumliil"},"description":""}</script></head><body data-header-desktop=auto data-header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"light"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"light"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Plumliil Blogs"><img class="lazyload logo" src=/svg/loading.min.svg data-src=https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png data-srcset="https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png, https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png 1.5x, https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png 2x" data-sizes=auto alt=https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png title=https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png><span id=id-1 class=typeit></span></a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<input type=text placeholder="Search titles or contents..." id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=Search><i class="fas fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Clear><i class="fas fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin" aria-hidden=true></i>
+</span></span><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme"><i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Plumliil Blogs"><img class="lazyload logo" src=/svg/loading.min.svg data-src=https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png data-srcset="https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png, https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png 1.5x, https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png 2x" data-sizes=auto alt=https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png title=https://s2.loli.net/2022/04/05/qa4sCStuDX5gyBb.png><span id=id-2 class=typeit></span></a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder="Search titles or contents..." id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=Search><i class="fas fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Clear><i class="fas fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>Cancel</a></div><a class=menu-item href=/posts/ title>文章</a><a class=menu-item href=/tags/ title>标签</a><a class=menu-item href=/categories/ title>分类</a><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contents</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Antd及AntdPro组件使用积累</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw" aria-hidden=true></i>Plumliil</a></span>&nbsp;<span class=post-category>included in <a href=/categories/%E5%89%8D%E7%AB%AF%E7%AF%87/><i class="far fa-folder fa-fw" aria-hidden=true></i>前端篇</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw" aria-hidden=true></i>&nbsp;<time datetime=2023-08-06>2023-08-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden=true></i>&nbsp;1498 words&nbsp;
+<i class="far fa-clock fa-fw" aria-hidden=true></i>&nbsp;3 minutes&nbsp;</div></div><div class="details toc" id=toc-static data-kept><div class="details-summary toc-title"><span>Contents</span>
+<span><i class="details-icon fas fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#modal>Modal</a></li><li><a href=#protable>ProTable</a></li><li><a href=#可编辑表格>可编辑表格</a></li><li><a href=#proformdependency>ProFormDependency</a></li></ul></li></ul></nav></div></div><div class=content id=content><p>Ant Design 和 Ant Design Pro 可能是 React 选手在日常工作中接触最多的库了.</p><p>接下来就说说在工作用可能会用到但是不经常用,但用的时候会忘的一些属性或方法的使用</p><h3 id=modal>Modal</h3><h4 id=自定义页脚按钮属性>自定义页脚按钮属性:</h4><p><img class=lazyload src=/svg/loading.min.svg data-src=https://img1.imgtp.com/2023/08/06/tLPCEaZf.png data-srcset="https://img1.imgtp.com/2023/08/06/tLPCEaZf.png, https://img1.imgtp.com/2023/08/06/tLPCEaZf.png 1.5x, https://img1.imgtp.com/2023/08/06/tLPCEaZf.png 2x" data-sizes=auto alt=https://img1.imgtp.com/2023/08/06/tLPCEaZf.png title=https://img1.imgtp.com/2023/08/06/tLPCEaZf.png></p><p>传入 okButtonProps 和 cancelButtonProps 可分别自定义确定按钮和取消按钮的 props。</p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://img1.imgtp.com/2023/08/06/v1rqPCtk.png data-srcset="https://img1.imgtp.com/2023/08/06/v1rqPCtk.png, https://img1.imgtp.com/2023/08/06/v1rqPCtk.png 1.5x, https://img1.imgtp.com/2023/08/06/v1rqPCtk.png 2x" data-sizes=auto alt=https://img1.imgtp.com/2023/08/06/v1rqPCtk.png title=https://img1.imgtp.com/2023/08/06/v1rqPCtk.png></p><table><thead><tr><th style=text-align:center>参数</th><th style=text-align:right>说明</th><th>类型</th></tr></thead><tbody><tr><td style=text-align:center>cancelButtonProps</td><td style=text-align:right>cancel 按钮 props</td><td>ButtonProps</td></tr><tr><td style=text-align:center>okButtonProps</td><td style=text-align:right>ok 按钮 props</td><td>ButtonProps</td></tr></tbody></table><div class=highlight><pre tabindex=0 class=chroma><code class=language-react data-lang=react><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>Modal</span>
+</span></span><span class=line><span class=cl>  <span class=na>title</span><span class=o>=</span><span class=s>&#34;cancelButtonProps 使用&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=na>visible</span><span class=o>=</span><span class=p>{</span><span class=kc>true</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=na>cancelButtonProps</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>style</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>display</span><span class=o>:</span> <span class=s2>&#34;none&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>}}</span>
+</span></span><span class=line><span class=cl>  <span class=na>okButtonProps</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>style</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>color</span><span class=o>:</span> <span class=s2>&#34;white&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>backgroundColor</span><span class=o>:</span> <span class=s2>&#34;pink&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>}}</span>
+</span></span><span class=line><span class=cl><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>h1</span><span class=p>&gt;</span><span class=nx>隐藏取消按钮</span><span class=p>&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>Modal</span><span class=p>&gt;</span>
+</span></span></code></pre></div><h3 id=protable>ProTable</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-react data-lang=react><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>type</span> <span class=p>{</span> <span class=nx>ProColumns</span><span class=p>,</span> <span class=nx>ProFormInstance</span> <span class=p>}</span> <span class=nx>from</span> <span class=s2>&#34;@ant-design/pro-components&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=p>{</span> <span class=nx>ProTable</span> <span class=p>}</span> <span class=nx>from</span> <span class=s2>&#34;@ant-design/pro-components&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=p>{</span> <span class=nx>useState</span> <span class=p>}</span> <span class=nx>from</span> <span class=s2>&#34;react&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=nx>type</span> <span class=nx>TableListItem</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>field</span><span class=o>:</span> <span class=nx>string</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>createdAt</span><span class=o>:</span> <span class=nx>string</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>columns</span><span class=o>:</span> <span class=nx>ProColumns</span><span class=p>&lt;</span><span class=nt>TableListItem</span><span class=p>&gt;[]</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;我是字段1字段1字段1&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;field&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;创建时间&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;createdAt&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>valueType</span><span class=o>:</span> <span class=s2>&#34;date&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span>
+</span></span><span class=line><span class=cl><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>data</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>field</span><span class=o>:</span> <span class=s2>&#34;1&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>createdAt</span><span class=o>:</span> <span class=s2>&#34;2023-08-05&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span>
+</span></span><span class=line><span class=cl><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>collapsed</span><span class=p>,</span> <span class=nx>setCollapsed</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=kc>false</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>ProTable</span><span class=err>&lt;</span><span class=na>TableListItem</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>style</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>          <span class=nx>margin</span><span class=o>:</span> <span class=s2>&#34;16px&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=p>}}</span>
+</span></span><span class=line><span class=cl>        <span class=nx>columns</span><span class=o>=</span><span class=p>{</span><span class=nx>columns</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=nx>dataSource</span><span class=o>=</span><span class=p>{</span><span class=nx>data</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=nx>rowKey</span><span class=o>=</span><span class=s2>&#34;key&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>pagination</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>          <span class=nx>showSizeChanger</span><span class=o>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=p>}}</span>
+</span></span><span class=line><span class=cl>        <span class=nx>search</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>          <span class=nx>labelWidth</span><span class=o>:</span> <span class=s2>&#34;auto&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=nx>collapsed</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=nx>onCollapse</span><span class=o>:</span> <span class=nx>setCollapsed</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=p>}}</span>
+</span></span><span class=line><span class=cl>        <span class=nx>options</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=nx>dateFormatter</span><span class=o>=</span><span class=s2>&#34;string&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=o>/&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></div><h4 id=查询栏控制>查询栏控制</h4><p>通过 search 属性可以对 ProTable 表格进行查询配置</p><h6 id=columns-中模糊查询配置>columns 中模糊查询配置</h6><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=err>title:</span> <span class=nt>&#34;类型&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=err>dataIndex:</span> <span class=nt>&#34;selectKey&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=err>valueType:</span> <span class=nt>&#34;select&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=err>fieldProps:</span> <span class=err>{</span>
+</span></span><span class=line><span class=cl>      <span class=err>showSearch:</span> <span class=err>true,</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span><span class=err>,</span>
+</span></span><span class=line><span class=cl>  <span class=err>},</span>
+</span></span></code></pre></div><p>通过配置 column 中 fieldProps 中 showSearch 属性可以进行模糊查询</p><h6 id=labelwidth>labelWidth</h6><p><img class=lazyload src=/svg/loading.min.svg data-src=https://img1.imgtp.com/2023/08/06/AlJVqx6D.png data-srcset="https://img1.imgtp.com/2023/08/06/AlJVqx6D.png, https://img1.imgtp.com/2023/08/06/AlJVqx6D.png 1.5x, https://img1.imgtp.com/2023/08/06/AlJVqx6D.png 2x" data-sizes=auto alt=https://img1.imgtp.com/2023/08/06/AlJVqx6D.png title=https://img1.imgtp.com/2023/08/06/AlJVqx6D.png></p><p>如上图红框所示,字段长度过长,显示会出问题,此时可以
+通过 labelWidth 对查询栏中的字段进行长度配置</p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://img1.imgtp.com/2023/08/06/BLLi2E0l.png data-srcset="https://img1.imgtp.com/2023/08/06/BLLi2E0l.png, https://img1.imgtp.com/2023/08/06/BLLi2E0l.png 1.5x, https://img1.imgtp.com/2023/08/06/BLLi2E0l.png 2x" data-sizes=auto alt=https://img1.imgtp.com/2023/08/06/BLLi2E0l.png title=https://img1.imgtp.com/2023/08/06/BLLi2E0l.png></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-react data-lang=react><span class=line><span class=cl><span class=nx>search</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>labelWidth</span><span class=o>:</span> <span class=s2>&#34;auto&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>}}</span>
+</span></span></code></pre></div><h6 id=collapsed>collapsed</h6><p>可收起查询字段配置</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-react data-lang=react><span class=line><span class=cl><span class=kr>const</span> <span class=p>[</span><span class=nx>collapsed</span><span class=p>,</span> <span class=nx>setCollapsed</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=kc>false</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>search</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>collapsed</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>onCollapse</span><span class=o>:</span> <span class=nx>setCollapsed</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>}}</span>
+</span></span></code></pre></div><h4 id=表格嵌套>表格嵌套</h4><p><img class=lazyload src=/svg/loading.min.svg data-src=https://img1.imgtp.com/2023/08/06/51Yjue6Q.png data-srcset="https://img1.imgtp.com/2023/08/06/51Yjue6Q.png, https://img1.imgtp.com/2023/08/06/51Yjue6Q.png 1.5x, https://img1.imgtp.com/2023/08/06/51Yjue6Q.png 2x" data-sizes=auto alt=https://img1.imgtp.com/2023/08/06/51Yjue6Q.png title=https://img1.imgtp.com/2023/08/06/51Yjue6Q.png></p><p>对于数据表格嵌套的实现可以借助 expandable 属性来实现</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-react data-lang=react><span class=line><span class=cl><span class=nx>expandable</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// 默认展开行
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>defaultExpandAllRows</span><span class=o>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// 展开行渲染
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>expandedRowRender</span><span class=o>:</span> <span class=p>(</span><span class=nx>record</span><span class=p>)</span> <span class=p>=&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>projectContentRender</span><span class=p>({</span> <span class=nx>record</span> <span class=p>}),</span>
+</span></span><span class=line><span class=cl><span class=p>}}</span>
+</span></span></code></pre></div><p>完整代码</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=line><span class=cl><span class=kr>import</span> <span class=nx>React</span><span class=p>,</span> <span class=p>{</span> <span class=nx>useRef</span><span class=p>,</span> <span class=nx>useState</span> <span class=p>}</span> <span class=kr>from</span> <span class=s2>&#34;react&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=kr>type</span> <span class=p>{</span> <span class=nx>ActionType</span><span class=p>,</span> <span class=nx>ProColumns</span> <span class=p>}</span> <span class=kr>from</span> <span class=s2>&#34;@ant-design/pro-table&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=p>{</span> <span class=nx>data</span> <span class=p>}</span> <span class=kr>from</span> <span class=s2>&#34;./data&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=p>{</span> <span class=nx>ProCard</span><span class=p>,</span> <span class=nx>ProFormField</span><span class=p>,</span> <span class=nx>ProTable</span> <span class=p>}</span> <span class=kr>from</span> <span class=s2>&#34;@ant-design/pro-components&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>classifyProjectsByYearAndClassification</span><span class=p>(</span><span class=nx>projects</span>: <span class=kt>any</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>classifiedProjects</span>: <span class=kt>any</span> <span class=o>=</span> <span class=p>[];</span>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=kr>const</span> <span class=nx>project</span> <span class=k>of</span> <span class=nx>projects</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>yearEntry</span> <span class=o>=</span> <span class=nx>classifiedProjects</span><span class=p>.</span><span class=nx>find</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>      <span class=p>(</span><span class=nx>entry</span>: <span class=kt>any</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=nx>entry</span><span class=p>.</span><span class=nx>title</span> <span class=o>===</span> <span class=nx>project</span><span class=p>.</span><span class=nx>grade</span>
+</span></span><span class=line><span class=cl>    <span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>yearEntry</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>classifiedProjects</span><span class=p>.</span><span class=nx>push</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>        <span class=nx>title</span>: <span class=kt>project.grade</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=nx>data</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=nx>one</span><span class=o>:</span> <span class=p>[],</span>
+</span></span><span class=line><span class=cl>          <span class=nx>two</span><span class=o>:</span> <span class=p>[],</span>
+</span></span><span class=line><span class=cl>          <span class=nx>three</span><span class=o>:</span> <span class=p>[],</span>
+</span></span><span class=line><span class=cl>        <span class=p>},</span>
+</span></span><span class=line><span class=cl>      <span class=p>});</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>updatedYearEntry</span> <span class=o>=</span> <span class=nx>classifiedProjects</span><span class=p>.</span><span class=nx>find</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>      <span class=p>(</span><span class=nx>entry</span>: <span class=kt>any</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=nx>entry</span><span class=p>.</span><span class=nx>title</span> <span class=o>===</span> <span class=nx>project</span><span class=p>.</span><span class=nx>grade</span>
+</span></span><span class=line><span class=cl>    <span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updatedYearEntry</span><span class=p>.</span><span class=nx>data</span><span class=p>[</span><span class=nx>project</span><span class=p>.</span><span class=kr>class</span><span class=p>].</span><span class=nx>push</span><span class=p>(</span><span class=nx>project</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>classifiedProjects</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>StudentList</span> <span class=o>=</span> <span class=p>()</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>actionRef</span> <span class=o>=</span> <span class=nx>useRef</span><span class=p>&lt;</span><span class=nt>ActionType</span><span class=p>&gt;();</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>expandedRowKeys</span><span class=p>,</span> <span class=nx>setExpandedRowKeys</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>([</span><span class=s2>&#34;高二&#34;</span><span class=p>]);</span> <span class=c1>// 设置初始展开的行的 key
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=kr>const</span> <span class=nx>dataSource</span> <span class=o>=</span> <span class=nx>classifyProjectsByYearAndClassification</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>dataSource</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>studentColumns</span>: <span class=kt>ProColumns</span><span class=p>[]</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;姓名&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;name&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;语文&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;subjectYuWen&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;数学&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;subjectShuXue&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;英语&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;subjectYingYu&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;排名&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;ranking&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;班级&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;class&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>valueType</span><span class=o>:</span> <span class=s2>&#34;select&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>render</span><span class=o>:</span> <span class=p>(</span><span class=nx>val</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>val</span> <span class=o>===</span> <span class=s2>&#34;one&#34;</span> <span class=o>?</span> <span class=s2>&#34;一班&#34;</span> <span class=o>:</span> <span class=nx>val</span> <span class=o>===</span> <span class=s2>&#34;two&#34;</span> <span class=o>?</span> <span class=s2>&#34;二班&#34;</span> <span class=o>:</span> <span class=s2>&#34;三班&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;年级&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;grade&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>valueType</span><span class=o>:</span> <span class=s2>&#34;select&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>];</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>gradeColumns</span>: <span class=kt>ProColumns</span><span class=p>[]</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;title&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>hideInSearch</span>: <span class=kt>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;姓名&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;name&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>hideInTable</span>: <span class=kt>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;语文&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;subjectYuWen&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>hideInTable</span>: <span class=kt>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;数学&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;subjectShuXue&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>hideInTable</span>: <span class=kt>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;英语&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;subjectYingYu&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>hideInTable</span>: <span class=kt>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;排名&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;ranking&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>hideInTable</span>: <span class=kt>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;班级&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;class&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>valueType</span><span class=o>:</span> <span class=s2>&#34;select&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>hideInTable</span>: <span class=kt>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>render</span><span class=o>:</span> <span class=p>(</span><span class=nx>val</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>val</span> <span class=o>===</span> <span class=s2>&#34;one&#34;</span> <span class=o>?</span> <span class=s2>&#34;一班&#34;</span> <span class=o>:</span> <span class=nx>val</span> <span class=o>===</span> <span class=s2>&#34;two&#34;</span> <span class=o>?</span> <span class=s2>&#34;二班&#34;</span> <span class=o>:</span> <span class=s2>&#34;三班&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;年级&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;grade&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>hideInTable</span>: <span class=kt>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>valueType</span><span class=o>:</span> <span class=s2>&#34;select&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>];</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>classColumns</span>: <span class=kt>ProColumns</span><span class=p>[]</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dataIndex</span><span class=o>:</span> <span class=s2>&#34;title&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>align</span><span class=o>:</span> <span class=s2>&#34;center&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>];</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>studentRender</span> <span class=o>=</span> <span class=p>(</span><span class=nx>params</span>: <span class=kt>any</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=p>{</span> <span class=nx>record1</span><span class=p>,</span> <span class=nx>data1</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>params</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>({</span> <span class=nx>record1</span><span class=p>,</span> <span class=nx>data1</span> <span class=p>});</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>ProTable</span>
+</span></span><span class=line><span class=cl>        <span class=na>className</span><span class=o>=</span><span class=s>&#34;expandedTable&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=na>scroll</span><span class=o>=</span><span class=p>{{</span> <span class=nx>x</span><span class=o>:</span> <span class=s2>&#34;max-content&#34;</span> <span class=p>}}</span>
+</span></span><span class=line><span class=cl>        <span class=na>columns</span><span class=o>=</span><span class=p>{</span><span class=nx>studentColumns</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>headerTitle</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>search</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>options</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>dataSource</span><span class=o>=</span><span class=p>{</span><span class=nx>data1</span><span class=p>[</span><span class=nx>record1</span><span class=p>.</span><span class=kr>type</span><span class=p>]}</span>
+</span></span><span class=line><span class=cl>        <span class=na>pagination</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>classRender</span> <span class=o>=</span> <span class=p>(</span><span class=nx>params</span>: <span class=kt>any</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=p>{</span> <span class=nx>record</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>params</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;record&#34;</span><span class=p>,</span> <span class=nx>record</span><span class=p>.</span><span class=nx>data</span><span class=p>.</span><span class=nx>three</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>ProTable</span>
+</span></span><span class=line><span class=cl>          <span class=na>rowKey</span><span class=o>=</span><span class=s>&#34;title&#34;</span>
+</span></span><span class=line><span class=cl>          <span class=na>scroll</span><span class=o>=</span><span class=p>{{</span> <span class=nx>x</span><span class=o>:</span> <span class=s2>&#34;max-content&#34;</span> <span class=p>}}</span>
+</span></span><span class=line><span class=cl>          <span class=na>columns</span><span class=o>=</span><span class=p>{</span><span class=nx>classColumns</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>          <span class=na>expandable</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>            <span class=nx>defaultExpandAllRows</span>: <span class=kt>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nx>expandedRowRender</span><span class=o>:</span> <span class=p>(</span><span class=nx>record1</span><span class=p>)</span> <span class=o>=&gt;</span>
+</span></span><span class=line><span class=cl>              <span class=nx>studentRender</span><span class=p>({</span> <span class=nx>record1</span><span class=p>,</span> <span class=nx>data1</span>: <span class=kt>record.data</span> <span class=p>}),</span>
+</span></span><span class=line><span class=cl>          <span class=p>}}</span>
+</span></span><span class=line><span class=cl>          <span class=na>headerTitle</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>          <span class=na>search</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>          <span class=na>options</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>          <span class=na>dataSource</span><span class=o>=</span><span class=p>{[</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>              <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;一班&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=nx>data</span>: <span class=kt>record.data.one</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=kr>type</span><span class=o>:</span> <span class=s2>&#34;one&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=p>},</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>              <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;二班&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=nx>data</span>: <span class=kt>record.data.two</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=kr>type</span><span class=o>:</span> <span class=s2>&#34;two&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=p>},</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>              <span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;三班&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=nx>data</span>: <span class=kt>record.data.three</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=kr>type</span><span class=o>:</span> <span class=s2>&#34;three&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=p>},</span>
+</span></span><span class=line><span class=cl>          <span class=p>].</span><span class=nx>filter</span><span class=p>((</span><span class=nx>item</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=nx>item</span><span class=p>.</span><span class=nx>data</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)}</span>
+</span></span><span class=line><span class=cl>          <span class=na>pagination</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span><span class=nx>record</span><span class=p>.</span><span class=nx>data</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>          <span class=p>&lt;</span><span class=nt>p</span>
+</span></span><span class=line><span class=cl>            <span class=na>style</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>              <span class=nx>textAlign</span><span class=o>:</span> <span class=s2>&#34;right&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=nx>marginRight</span>: <span class=kt>10</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=p>}}</span>
+</span></span><span class=line><span class=cl>          <span class=p>&gt;&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>)}</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;/&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>ProTable</span>
+</span></span><span class=line><span class=cl>      <span class=na>actionRef</span><span class=o>=</span><span class=p>{</span><span class=nx>actionRef</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=na>columns</span><span class=o>=</span><span class=p>{</span><span class=nx>gradeColumns</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=na>search</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>labelWidth</span>: <span class=kt>120</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=p>}}</span>
+</span></span><span class=line><span class=cl>      <span class=na>scroll</span><span class=o>=</span><span class=p>{{</span> <span class=nx>x</span><span class=o>:</span> <span class=s2>&#34;max-content&#34;</span> <span class=p>}}</span>
+</span></span><span class=line><span class=cl>      <span class=na>dataSource</span><span class=o>=</span><span class=p>{</span><span class=nx>dataSource</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=na>rowKey</span><span class=o>=</span><span class=s>&#34;title&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=na>expandable</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>expandedRowKeys</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=nx>expandedRowRender</span><span class=o>:</span> <span class=p>(</span><span class=nx>record</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=nx>classRender</span><span class=p>({</span> <span class=nx>record</span> <span class=p>}),</span>
+</span></span><span class=line><span class=cl>        <span class=nx>onExpand</span><span class=o>:</span> <span class=p>(</span><span class=nx>expanded</span><span class=p>,</span> <span class=nx>record</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=kr>const</span> <span class=nx>keys</span> <span class=o>=</span> <span class=nx>expanded</span>
+</span></span><span class=line><span class=cl>            <span class=o>?</span> <span class=p>[...</span><span class=nx>expandedRowKeys</span><span class=p>,</span> <span class=nx>record</span><span class=p>.</span><span class=nx>title</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>            <span class=o>:</span> <span class=nx>expandedRowKeys</span><span class=p>.</span><span class=nx>filter</span><span class=p>((</span><span class=nx>key</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=nx>key</span> <span class=o>!==</span> <span class=nx>record</span><span class=p>.</span><span class=nx>title</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>          <span class=nx>setExpandedRowKeys</span><span class=p>(</span><span class=nx>keys</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>},</span>
+</span></span><span class=line><span class=cl>      <span class=p>}}</span>
+</span></span><span class=line><span class=cl>      <span class=na>dateFormatter</span><span class=o>=</span><span class=s>&#34;string&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=na>pagination</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=nx>StudentList</span><span class=p>;</span>
+</span></span></code></pre></div><h3 id=可编辑表格>可编辑表格</h3><h4 id=recordcreatorprops>recordCreatorProps</h4><p>通过设置 recordCreatorProps 属性中的 newRecordType 为 dataSource 可以取消添加数据限制</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-react data-lang=react><span class=line><span class=cl><span class=nx>recordCreatorProps</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>newRecordType</span><span class=o>:</span> <span class=s2>&#34;dataSource&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>}}</span>
+</span></span></code></pre></div><h3 id=proformdependency>ProFormDependency</h3><p>依赖某一个字段渲染另一个字段</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=line><span class=cl><span class=kr>import</span> <span class=p>{</span> <span class=nx>ProForm</span><span class=p>,</span> <span class=nx>ProFormDependency</span><span class=p>,</span> <span class=nx>ProFormSelect</span> <span class=p>}</span> <span class=kr>from</span> <span class=s1>&#39;@ant-design/pro-components&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=p>()</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>option</span> <span class=o>=</span> <span class=p>[{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;1&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>1</span> <span class=p>},</span> <span class=p>{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;2&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>2</span> <span class=p>},</span> <span class=p>{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;3&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>3</span> <span class=p>}]</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>style</span><span class=o>=</span><span class=p>{{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>marginTop</span>: <span class=kt>200</span>
+</span></span><span class=line><span class=cl>    <span class=p>}}&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>ProForm</span> <span class=na>submitter</span><span class=o>=</span><span class=p>{</span><span class=kc>false</span><span class=p>}&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>ProFormSelect</span>
+</span></span><span class=line><span class=cl>          <span class=na>name</span><span class=o>=</span><span class=s>&#34;field1&#34;</span>
+</span></span><span class=line><span class=cl>          <span class=na>options</span><span class=o>=</span><span class=p>{</span><span class=nx>option</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>ProFormDependency</span> <span class=na>name</span><span class=o>=</span><span class=p>{[</span><span class=s1>&#39;field1&#39;</span><span class=p>]}&gt;</span>
+</span></span><span class=line><span class=cl>          <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=p>({</span> <span class=nx>field1</span> <span class=p>})</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>              <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>field1</span><span class=p>)</span> <span class=k>return</span> <span class=p>&lt;&gt;&lt;/&gt;</span>
+</span></span><span class=line><span class=cl>              <span class=kr>const</span> <span class=nx>option1</span> <span class=o>=</span> <span class=p>[{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;1-1&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>11</span> <span class=p>},</span> <span class=p>{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;1-2&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>12</span> <span class=p>},</span> <span class=p>{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;1-3&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>13</span> <span class=p>}]</span>
+</span></span><span class=line><span class=cl>              <span class=kr>const</span> <span class=nx>option2</span> <span class=o>=</span> <span class=p>[{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;2-1&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>21</span> <span class=p>},</span> <span class=p>{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;2-2&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>22</span> <span class=p>},</span> <span class=p>{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;2-3&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>23</span> <span class=p>}]</span>
+</span></span><span class=line><span class=cl>              <span class=kr>const</span> <span class=nx>option3</span> <span class=o>=</span> <span class=p>[{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;3-1&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>31</span> <span class=p>},</span> <span class=p>{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;3-2&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>32</span> <span class=p>},</span> <span class=p>{</span> <span class=nx>label</span><span class=o>:</span> <span class=s1>&#39;3-3&#39;</span><span class=p>,</span> <span class=nx>value</span>: <span class=kt>33</span> <span class=p>}]</span>
+</span></span><span class=line><span class=cl>              <span class=k>return</span> <span class=p>&lt;</span><span class=nt>ProFormSelect</span>
+</span></span><span class=line><span class=cl>                <span class=na>name</span><span class=o>=</span><span class=s>&#34;field2&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=na>options</span><span class=o>=</span><span class=p>{</span><span class=nx>field1</span> <span class=o>===</span> <span class=mi>1</span> <span class=o>?</span> <span class=nx>option1</span> : <span class=kt>field1</span> <span class=o>===</span> <span class=mi>2</span> <span class=o>?</span> <span class=nx>option2</span> : <span class=kt>option3</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>              <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>          <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;/</span><span class=nt>ProFormDependency</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;/</span><span class=nt>ProForm</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Updated on 2023-08-06</span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Share on Twitter" data-sharer=twitter data-url=https://plumliil.cn/posts/20230806-antd%E5%8F%8Aandpro%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E7%A7%AF%E7%B4%AF/ data-title=Antd及AntdPro组件使用积累 data-hashtags=React,AntD><i class="fab fa-twitter fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Hacker News" data-sharer=hackernews data-url=https://plumliil.cn/posts/20230806-antd%E5%8F%8Aandpro%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E7%A7%AF%E7%B4%AF/ data-title=Antd及AntdPro组件使用积累><i class="fab fa-hacker-news fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Reddit" data-sharer=reddit data-url=https://plumliil.cn/posts/20230806-antd%E5%8F%8Aandpro%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E7%A7%AF%E7%B4%AF/><i class="fab fa-reddit fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw" aria-hidden=true></i>&nbsp;<a href=/tags/react/>React</a>,&nbsp;<a href=/tags/antd/>AntD</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/posts/20230702-react%E4%B8%AD%E7%BC%96%E5%86%99%E8%87%AA%E5%AE%9A%E4%B9%89hook/ class=prev rel=prev title=React中编写操作树形数据的自定义Hook><i class="fas fa-angle-left fa-fw" aria-hidden=true></i>React中编写操作树形数据的自定义Hook</a>
+<a href=/posts/20230907-react%E4%B8%ADusecontextusereducer%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/ class=next rel=next title=React中useContext,useReducer简单实现全局状态管理>React中useContext,useReducer简单实现全局状态管理<i class="fas fa-angle-right fa-fw" aria-hidden=true></i></a></div></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line itemscope itemtype=http://schema.org/CreativeWork><i class="far fa-copyright fa-fw" aria-hidden=true></i><span itemprop=copyrightYear>2021 - 2024</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Plumliil</a></span>&nbsp;|&nbsp;<span class=license>MIT</span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top"><i class="fas fa-arrow-up fa-fw" aria-hidden=true></i>
+</a><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment fa-fw" aria-hidden=true></i></a></div><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js></script><script type=text/javascript>window.config={code:{copyTitle:"Copy to clipboard",maxShownLines:50},comment:{},data:{"id-1":"Plumliil Blog","id-2":"Plumliil Blog"},search:{algoliaAppID:"XDAAF3RRN2",algoliaIndex:"Prod_Plumliil_Blog",algoliaSearchKey:"1be2ecd1b6bf627a63117d958f5c51d7",highlightTag:"em",maxResultLength:10,noResultsFound:"No results found",snippetLength:30,type:"algolia"},typeit:{cursorChar:"|",cursorSpeed:1e3,data:{"id-1":["id-1"],"id-2":["id-2"]},duration:-1,speed:100}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-DWDPX2NGYH",{anonymize_ip:!0})</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=G-DWDPX2NGYH" async></script></body></html>
