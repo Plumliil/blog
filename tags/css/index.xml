@@ -1,0 +1,9 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Css - Tag - Plumliil Blogs</title><link>https://plumliil.cn/tags/css/</link><description>Css - Tag - Plumliil Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>plumliil@outlook.com (Plumliil)</managingEditor><webMaster>plumliil@outlook.com (Plumliil)</webMaster><lastBuildDate>Wed, 21 Dec 2022 16:03:45 +0000</lastBuildDate><atom:link href="https://plumliil.cn/tags/css/" rel="self" type="application/rss+xml"/><item><title>网页滚动条样式修改</title><link>https://plumliil.cn/posts/20221221-%E7%BD%91%E9%A1%B5%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9/</link><pubDate>Wed, 21 Dec 2022 16:03:45 +0000</pubDate><author>Plumliil</author><guid>https://plumliil.cn/posts/20221221-%E7%BD%91%E9%A1%B5%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9/</guid><description>修改网页中侧边滚动条可以对如下几方面进行修改 ::-webkit-scrollbar:滚动条整体 ::-webkit-scrollbar-thu</description></item><item><title>什么是BFC</title><link>https://plumliil.cn/posts/20220410-%E4%BB%80%E4%B9%88%E6%98%AFbfc/</link><pubDate>Sun, 10 Apr 2022 13:50:54 +0000</pubDate><author>Plumliil</author><guid>https://plumliil.cn/posts/20220410-%E4%BB%80%E4%B9%88%E6%98%AFbfc/</guid><description>BFC(块级格式化上下文) 什么是BFC 指的是一个块级渲染作用域,该区域内拥有一套完整的规则来约束块级盒子的布局,且与区域外部无关. 为什么要使</description></item><item><title>border-radius</title><link>https://plumliil.cn/posts/20210718-border-radius/</link><pubDate>Sun, 18 Jul 2021 17:55:14 +0000</pubDate><author>Plumliil</author><guid>https://plumliil.cn/posts/20210718-border-radius/</guid><description><![CDATA[<p>border-radius - 指定每个圆角</p>
+<p>如果你在 border-radius 属性中只指定一个值，那么将生成 4 个 圆角。</p>
+<p>但是，如果你要在四个角上一一指定，可以使用以下规则：</p>
+<ul>
+<li>四个值: 第一个值为左上角，第二个值为右上角，第三个值为右下角，第四个值为左下角。</li>
+<li>三个值: 第一个值为左上角,     第二个值为右上角和左下角，第三个值为右下角</li>
+<li>两个值: 第一个值为左上角与右下角，第二个值为右上角与左下角</li>
+<li>一个值： 四个圆角值相同</li>
+</ul>]]></description></item></channel></rss>
